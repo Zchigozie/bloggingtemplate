@@ -16,9 +16,9 @@ jobs:
           aws-region: 'us-east-1'
 
      - name: Allow access to S3 
-        run: |
-            aws s3 sync ./ s3://githubaction-blogtemplate/ --include "*" --include "index.html" --include "css"
+       run: |
+            aws s3 sync ./ s3://githubaction-blogtemplate/ --include "*" --include "index.html" --include ".css" --include "images"
             
            
          
-            --include "images/*" 
+            

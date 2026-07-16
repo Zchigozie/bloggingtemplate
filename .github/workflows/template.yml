@@ -17,8 +17,8 @@ jobs:
 
      - name: Allow access to S3 
         run: |
-            aws s3 sync ./ s3://githubaction-blogtemplate/ \
-            --exclude "a" \
-            --include "index.html" \
-            --include "css/*" \          
+            aws s3 sync ./ s3://githubaction-blogtemplate/ --include "*" --include "index.html" --include "css"
+            
+           
+         
             --include "images/*" 
